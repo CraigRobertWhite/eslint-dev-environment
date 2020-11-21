@@ -1,93 +1,19 @@
 {
-    "root": true,
-    "env": {
-        "browser": true
-    },
     "extends": [
-        "eslint:recommended"
+        "eslint:recommended",
+        "prettier"
     ],
-    "globals": {
-        "_": "readonly"
-    },
-    "ignorePatterns": [
-        "public/theme/**"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 6
+    "env": {
+        "browser": true,
+        "es6": true
     },
     "rules": {
-        "curly": [
-            "error"
-        ],
-        "eol-last": [
-            "error",
-            "always"
-        ],
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "max-len": [
-            "warn",
-            {
-                "code": 120,
-                "ignoreUrls": true,
-                "ignoreRegExpLiterals": true
-            }
-        ],
-        "new-parens": "error",
-        "no-console": "warn",
-        "no-debugger": "warn",
-        "no-trailing-spaces": [
-            "error",
-            {
-                "skipBlankLines": true
-            }
-        ],
+        "prettier/prettier": "error",
         "no-unused-vars": [
             "warn"
-        ],
-        "no-var": [
-            "error"
-        ],
-        "object-curly-spacing": [
-            "error",
-            "always",
-            {
-                "objectsInObjects": false
-            }
-        ],
-        "prefer-const": [
-            "warn"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "require-await": [
-            "warn"
-        ],
-        "space-before-function-paren": [
-            "error",
-            {
-                "anonymous": "never",
-                "named": "never",
-                "asyncArrow": "always"
-            }
         ]
     },
-    "overrides": [
-        {
-            "files": [
-                "*.js"
-            ],
-            "rules": {
-                "indent": "off"
-            }
-        }
+    "plugins": [
+        "prettier"
     ]
 }
